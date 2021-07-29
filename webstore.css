@@ -1,0 +1,299 @@
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    font-family: sans-serif;
+    margin: 0 auto;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23374942'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='24' height='24' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='12' cy='12' r='12'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1, h2, h3 { 
+    text-align: center;
+}
+
+h1 { 
+    font-size: 4rem;
+}
+
+h1, h2 { 
+    color: white;
+}
+
+span{ 
+    text-align: center;
+    padding: 10px;
+}
+
+h3 { 
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.storeWrapper { 
+    display: grid;
+    grid-template-rows: 5%, 60%, 30%, 5%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 88, 88, 0.6);
+}
+
+.title { 
+    grid-area: 1/1/2/2;
+}
+
+.shoppingCard { 
+    grid-area: 3/1/4/2;
+    height: 100%;
+    width: 100%;
+    height: 200px;
+    max-width: 600px;
+    background-color: white;;
+    margin: 20px auto;
+    overflow-y: scroll;
+    border: 2px solid black;
+}
+
+.items { 
+    grid-area: 2/1/3/2;
+    border-top: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.item { 
+    position: relative;
+    margin: 10px 10px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.itemImage { 
+    height: 160px;
+    border-bottom: 2px solid black;
+}
+
+.items img { 
+    width: 100%;
+    height: 100%; 
+}
+
+.items button {
+    justify-self: flex-end;
+    padding: 10px;
+    color: white;
+    background-color: rgb(86, 133, 86);
+    border: none;
+}
+
+.items button:hover { 
+    cursor: pointer;
+    color: orange;
+}
+
+.items span { 
+    color: rgb(0, 0, 0);
+}
+
+.cardItem { 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: rgb(1,1,1,0.4);
+    padding: 10px;
+    color: white;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.removeBtn { 
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    padding: 5px;
+    font-weight: 900;
+    background-color: rgb(218, 131, 131);
+    border: 2px solid black;
+}
+
+.removeBtn:hover { 
+    cursor: pointer;
+}
+
+.itemPrice { 
+    font-size: 1.8rem;
+}
+
+.onSale { 
+    font-weight: 600;
+    color: rgb(58, 190, 135) !important;
+    font-size: 3rem;
+}
+
+.saleIcon { 
+    font-size: 1rem;
+    position: absolute;
+}
+
+.totalDiv { 
+    font-weight: 600;
+    margin-left: 4rem;
+
+}
+
+/*checkout div*/ 
+
+.totalMoney { 
+    background-color: white;
+    width: 200px;
+    padding: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.checkOutDiv { 
+    grid-area: 4/1/5/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.checkout { 
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 600px;
+    margin: 20px;
+}
+
+.checkOutButton {
+    margin-top: 30px; 
+    padding: 10px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: green;
+    border: none;
+}
+
+.checkOutButton:hover { 
+    cursor: pointer;
+    border: 1px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+/* Modal */ 
+.modalCheckOut { 
+    background-color: rgb(0, 0, 0, 0.70);
+    color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.modalHide { 
+   display: none;
+}
+
+.modal { 
+    position: relative;
+    padding: 80px; 
+    border: 1px solid white;
+    background-color: rgba(36, 71, 55, 0.6);
+    font-size: 1.3rem;
+}
+
+.modal button { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    border: none;
+    background-color: red;
+    font-weight: 600;
+    color: white;
+}
+
+.modal button:hover { 
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media only screen and (min-width: 1660px) { 
+    .storeWrapper { 
+        max-width: 1700px;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+    }
+}
+
+@media only screen and (max-width: 720px) { 
+    h1 { 
+        font-size: 2rem;
+    }
+
+    h2 { 
+        font-size: 1rem;
+    }
+
+    .storeWrapper { 
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .saleIcon {
+        position: absolute;
+    }
+    
+}
+
+@media only screen and (max-width: 554px) { 
+    .shoppingCard { 
+        width: 100%;
+        max-width: 600px;
+        background-color: white;
+        margin: 0px auto;
+        border: 2px solid black;
+    }
+
+    .items { 
+        justify-content:space-evenly;
+    }
+
+    .checkout { 
+        flex-direction: column;
+    }
+
+    .totalDiv { 
+        font-weight: 600;
+        margin-left: 0.1rem;
+    
+    }
+
+    .cardItem { 
+        flex-direction: column;
+        justify-content:space-evenly;
+       
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webstore.css">
+    <title>Webstore</title>
+</head>
+<body>
+    <div class="storeWrapper">
+        <div class="title">
+            <h1>The Klumpers Webstore</h1>
+            <h2>Voeg iets toe aan uw winkelmandje</h2>
+        </div>
+        <div class="items">
+            <div class="item">
+                <div class="itemImage"><img src="./images/plant1.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+            <div class="item">
+                <div class="itemImage"><img src="./images/plant2.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+            <div class="item">
+                <div class="itemImage"><img src="./images/plant3.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+            <div class="item">
+                <div class="itemImage"><img src="./images/bike.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+            <div class="item">
+                <div class="itemImage"><img src="./images/carpet.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+            <div class="item">
+                <div class="itemImage"><img src="./images/chair.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+            <div class="item">
+                <div class="itemImage"><img src="./images/flowers.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+            <div class="item">
+                <div class="itemImage"><img src="./images/laptop.jpg" alt=""></div>
+                <span>€<span class="itemPrice"></span></span>
+                <button class = "getItem">Voeg toe</button>
+            </div>
+        </div>
+        <div class="shoppingCardContainer">
+            <div class="shoppingCard">
+                <h3>Uw winkelmandje</h3>
+                <div class="card">
+                </div>
+            </div>
+        </div>
+        <div class="checkOutDiv">
+            <div class="checkout">
+                <div class="totalMoney"><span>Totaal €<span id="addedItems"></span></span></div>
+                <button class="checkOutButton">Afrekenen</button>
+            </div>
+        </div>
+    </div>
+    <div class="modalCheckOut modalHide">
+        <div class="modal">
+            <h4>Bedankt voor je aankoop!</h4>
+            <button class="modalButton">X</button>
+        </div>
+    </div>
+    <script src="webstore.js"></script>
+</body>
+</html>
